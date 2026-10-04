@@ -43,7 +43,7 @@ var items = [
     { key: 'lorePage', name: 'Lore Fragment', icon: 189, price: 0, scope: 0, occ: 3, itype: 2, desc: 'A torn page of Archive history. Read them at the Echo Stand.' },
     { key: 'indexPage', name: 'Index Page', icon: 190, price: 0, scope: 0, occ: 3, itype: 2, desc: 'The page the Curator guarded. It names the way to the Inkwell.' },
     { key: 'sigil', name: 'Warden\'s Sigil', icon: 191, price: 0, scope: 0, occ: 3, itype: 2, desc: 'A seal that glows faintly with a forgotten name.' },
-    { key: 'echoCache', name: 'Echo Cache', icon: 192, price: 0, scope: 0, occ: 2, desc: 'A sealed cache of echo shards (+150). Use from the menu.',
+    { key: 'echoCache', name: 'Echo Cache', icon: 192, price: 0, scope: 11, occ: 2, desc: 'A sealed cache of echo shards (+150). Use from the menu.',
       fx: [['ce', 'useCache']], consumable: true }
 ];
 

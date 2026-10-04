@@ -39,7 +39,7 @@ function copy(rel, skip) {
 
 var counts = {};
 counts.data = copy('data', function(f) { return path.basename(f) === 'System.json'; });
-['tilesets', 'enemies', 'battlebacks1', 'battlebacks2', 'titles1'].forEach(function(d) { counts['img/' + d] = copy(path.join('img', d)); });
+['tilesets', 'enemies', 'sv_enemies', 'battlebacks1', 'battlebacks2', 'titles1'].forEach(function(d) { counts['img/' + d] = copy(path.join('img', d)); });
 counts.plugins = copy(path.join('js', 'plugins'));
 
 // merge System.json

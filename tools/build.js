@@ -23,7 +23,12 @@ function writePng(rel, canvas) { fs.writeFileSync(out(rel), canvas.png()); }
 var ts = tileset.build();
 writePng('img/tilesets/ArchiveA5.png', ts.a5);
 writePng('img/tilesets/ArchiveB.png', ts.b);
-Object.keys(enemyArt).forEach(function(n) { writePng('img/enemies/' + n + '.png', enemyArt[n]()); });
+// MV loads enemy battlers from img/sv_enemies in side-view mode and img/enemies in front-view mode: provide both
+Object.keys(enemyArt).forEach(function(n) {
+    var c = enemyArt[n]();
+    writePng('img/enemies/' + n + '.png', c);
+    writePng('img/sv_enemies/' + n + '.png', c);
+});
 writePng('img/battlebacks1/StacksFloor.png', sceneArt.StacksFloor());
 writePng('img/battlebacks2/StacksWall.png', sceneArt.StacksWall());
 writePng('img/battlebacks1/InkFloor.png', sceneArt.InkFloor());
@@ -57,7 +62,7 @@ maps.forEach(function(m) {
 writeJson('data/MapInfos.json', infos);
 
 // ---- system & plugins ---------------------------------------------------------------------------------
-writeJson('data/System.json', systemMod.build());
+writeJson('data/System.json', systemMod.build(d.ID));
 writeText('js/plugins/ArchiveData.js', gen.archiveData(d.ID));
 writeText('js/plugins/GachaBanners.js', gen.gachaBanners(d.ID));
 writeText('js/plugins.js', gen.pluginsJs());

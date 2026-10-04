@@ -70,6 +70,15 @@ var Echoes = Echoes || {};
         return objs;
     };
 
+    // The "Burst" command (skill type 2) only appears once the actor actually knows a Burst skill,
+    // otherwise every character would show an empty Burst menu.
+    var _addedSkillTypes = Game_Actor.prototype.addedSkillTypes;
+    Game_Actor.prototype.addedSkillTypes = function() {
+        var types = _addedSkillTypes.call(this);
+        if (types.indexOf(2) < 0 && this.skills().some(function(s) { return s.stypeId === 2; })) { types.push(2); }
+        return types;
+    };
+
     Echoes.burstSkillId = function(actorId) {
         var a = $dataActors[actorId];
         return a && a.meta && a.meta.Burst ? Number(a.meta.Burst) : 0;

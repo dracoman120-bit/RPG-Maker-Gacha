@@ -38,6 +38,8 @@ Game_Actor.prototype.learnSkill = function(id) { if (this._skills.indexOf(id) < 
 Game_Actor.prototype.isLearnedSkill = function(id) { return this._skills.indexOf(id) >= 0; };
 Game_Actor.prototype.setNickname = function(n) { this._nickname = n; };
 Game_Actor.prototype.refresh = function() {};
+Game_Actor.prototype.skills = function() { return this._skills.map(function(id) { return $dataSkills[id]; }); };
+Game_Actor.prototype.addedSkillTypes = function() { return [1]; };
 Game_Actor.prototype.recoverAll = function() { this._hp = this.mhp; };
 Game_Actor.prototype.changeLevel = function(level) {
     this._level = level;

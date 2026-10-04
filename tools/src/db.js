@@ -144,7 +144,7 @@ function build(story) {
         var effects = [];
         (s.fx || []).forEach(function(f) { effects = effects.concat(effect(f)); });
         items.push({
-            id: i + 1, animationId: s.scope ? 41 : 0, consumable: s.consumable !== undefined ? s.consumable : !!s.scope,
+            id: i + 1, animationId: 0, consumable: s.consumable !== undefined ? s.consumable : !!s.scope,
             damage: { critical: false, elementId: 0, formula: '0', type: 0, variance: 20 }, description: s.desc, effects: effects, hitType: 0,
             iconIndex: s.icon, itypeId: s.itype || 1, name: s.name, note: s.scope ? '<Anim: Heal 1>' : '', occasion: s.occ !== undefined ? s.occ : 0,
             price: s.price, repeats: 1, scope: s.scope, speed: 0, successRate: 100, tpGain: 0
@@ -188,7 +188,7 @@ function build(story) {
             return arr;
         });
         var traits = [{ code: 22, dataId: 0, value: 0.95 }, { code: 22, dataId: 1, value: 0.05 }, { code: 22, dataId: 2, value: 0.04 + (c.crit || 0) },
-                      { code: 41, dataId: 1, value: 1 }, { code: 41, dataId: 2, value: 1 }];
+                      { code: 41, dataId: 1, value: 1 }];   // the Burst skill type is added by ArchiveEchoes once a Burst is learned
         c.wtypes.forEach(function(w) { traits.push({ code: 51, dataId: w, value: 1 }); });
         c.atypes.forEach(function(a) { traits.push({ code: 52, dataId: a, value: 1 }); });
         (c.resist || []).forEach(function(r) { traits.push({ code: 11, dataId: r[0], value: r[1] }); });

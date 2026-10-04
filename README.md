@@ -54,7 +54,7 @@ Details: [`docs/GAME_DESIGN.md`](docs/GAME_DESIGN.md), [`docs/roster.md`](docs/r
 
 ```
 data/            generated MV database, maps, tileset, system
-img/             generated tileset, monsters, battlebacks, title screen
+img/             generated tileset, monsters (enemies/ and sv_enemies/), battlebacks, title screen
 js/plugins/      GachaSystem.js (reusable engine + summon scene)
                  GachaBanners.js, ArchiveData.js (generated), ArchiveEchoes.js, ArchiveHall.js
 js/plugins.js    plugin list with this game's parameters

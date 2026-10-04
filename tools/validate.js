@@ -62,7 +62,10 @@ D.Enemies.forEach(function(e) {
     if (!e.actions.length) { err(w, 'no actions'); }
     e.actions.forEach(function(a) { if (!has('Skills', a.skillId)) { err(w, 'bad skill ' + a.skillId); } });
     e.dropItems.forEach(function(d) { if (d.kind === 1 && !has('Items', d.dataId)) { err(w, 'bad drop'); } });
-    if (!fs.existsSync(path.join(root, 'img', 'enemies', e.battlerName + '.png'))) { err(w, 'missing battler image ' + e.battlerName); }
+    // side-view battles (the default) load img/sv_enemies, front-view loads img/enemies
+    ['enemies', 'sv_enemies'].forEach(function(dir) {
+        if (!fs.existsSync(path.join(root, 'img', dir, e.battlerName + '.png'))) { err(w, 'missing battler image img/' + dir + '/' + e.battlerName + '.png'); }
+    });
     if (e.params.length !== 8) { err(w, 'params'); }
     if (!/<Shards: \d+>/.test(e.note)) { warn(w, 'no shards note'); }
 });

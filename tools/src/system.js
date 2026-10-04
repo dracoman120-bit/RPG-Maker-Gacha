@@ -15,7 +15,7 @@ function names(map, count) {
     return out;
 }
 
-function build() {
+function build(ID) {
     var sounds = ['Cursor2', 'Decision1', 'Cancel2', 'Buzzer1', 'Equip1', 'Save', 'Load', 'Battle1', 'Run', 'Attack3', 'Damage4', 'Collapse1', 'Collapse2',
                   'Collapse3', 'Damage5', 'Collapse4', 'Recovery', 'Miss', 'Evasion1', 'Evasion2', 'Reflection', 'Shop1', 'Item3', 'Item3'].map(function(n) { return audio(n); });
     var motions = [{ type: 0, weaponImageId: 0 }, { type: 1, weaponImageId: 2 }, { type: 0, weaponImageId: 12 }, { type: 2, weaponImageId: 7 },
@@ -58,7 +58,9 @@ function build() {
                 seVolume: 'SE Volume', substitute: '%1 protected %2!', surprise: '%1 was surprised!', useItem: '%1 uses %2!', victory: '%1 was victorious!'
             }
         },
-        testBattlers: [{ actorId: 1, equips: [1, 0, 0, 0, 0], level: 1 }], testTroopId: 1, title1Name: 'EchoesTitle', title2Name: '',
+        testBattlers: ID ? [['iri', 'staff_N'], ['doran', 'blade_N'], ['sera', 'tome_N'], ['marla', 'staff_N']].map(function(b) {
+            return { actorId: ID.actor[b[0]], equips: [ID.weapon[b[1]], 0, 0, 0, 0], level: 6 };
+        }) : [], testTroopId: ID ? ID.troop.curator : 1, title1Name: 'EchoesTitle', title2Name: '',
         titleBgm: audio('Theme1'), variables: names(ids.VARIABLE_NAMES, 40), versionId: 20261004, victoryMe: audio('Victory1'), weaponTypes: ['', 'Blade', 'Spear', 'Bow', 'Staff', 'Tome'],
         windowTone: [0, 0, 0]
     };

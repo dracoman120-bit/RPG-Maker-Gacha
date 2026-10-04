@@ -25,7 +25,7 @@ Object.keys(VARIABLE).forEach(function(k) { VARIABLE_NAMES[VARIABLE[k]] = k; });
 var AUDIO = {
     bgmHall: 'Theme1', bgmStacks: 'Dungeon1', bgmInk: 'Dungeon3', bgmBattle: 'Battle1', bgmBoss: 'Battle3',
     bgmPrologue: 'Dungeon2', bgmQuiet: 'Theme3',
-    seDoor: 'Open1', seChest: 'Chest1', seCursor: 'Cursor1', seHeal: 'Heal1', seSave: 'Save',
+    seDoor: 'Open1', seChest: 'Chest', seCursor: 'Cursor1', seHeal: 'Recovery', seSave: 'Save',
     seFlash: 'Thunder1', seTeleport: 'Teleport', sePower: 'Powerup', seBuzzer: 'Buzzer1'
 };
 
