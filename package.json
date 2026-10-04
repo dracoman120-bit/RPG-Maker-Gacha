@@ -1,0 +1,14 @@
+{
+  "name": "echoes-of-the-sundered-archive",
+  "version": "0.1.0",
+  "description": "A gacha JRPG for RPG Maker MV: banners, N/R/SR/SSR/UR echoes, pity, a hall-builder meta layer and a playable story slice.",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build.js",
+    "validate": "node tools/validate.js",
+    "test": "node tests/gacha.test.js && node tests/playthrough.test.js && node tools/validate.js",
+    "balance": "node tools/balance.js 200",
+    "preview": "node tools/preview.js",
+    "install-game": "node tools/install.js"
+  }
+}

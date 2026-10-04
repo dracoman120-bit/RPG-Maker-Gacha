@@ -1,0 +1,87 @@
+
+Prologue (Iri alone vs 2 faded wisps)
+  Iri alone: win 100%  avg turns 5.2
+
+Stacks fodder: wisp + mites (lvl 3)
+  Iri + Wick + Pip + Marla (N/N/R)             win  99%  turns 5.5  hp left 63%
+  Iri + Doran + Fenn + Sera (R/R/SR)           win 100%  turns 2.1  hp left 83%
+  Iri + Kael + Tobias + Isolde (SR/SR/SSR)     win 100%  turns 2.3  hp left 87%
+  Iri + Brannock + Marla + Sera                win 100%  turns 2.1  hp left 87%
+  Iri + Aurelian + Nyx + Brannock (UR)         win 100%  turns 2.0  hp left 95%
+
+Stacks F2: scribe pair (lvl 5)
+  Iri + Wick + Pip + Marla (N/N/R)             win 100%  turns 5.4  hp left 65%
+  Iri + Doran + Fenn + Sera (R/R/SR)           win 100%  turns 2.4  hp left 86%
+  Iri + Kael + Tobias + Isolde (SR/SR/SSR)     win 100%  turns 2.8  hp left 85%
+  Iri + Brannock + Marla + Sera                win 100%  turns 2.8  hp left 88%
+  Iri + Aurelian + Nyx + Brannock (UR)         win 100%  turns 2.2  hp left 96%
+
+Stacks mimic (lvl 5)
+  Iri + Wick + Pip + Marla (N/N/R)             win 100%  turns 3.9  hp left 76%
+  Iri + Doran + Fenn + Sera (R/R/SR)           win 100%  turns 2.1  hp left 88%
+  Iri + Kael + Tobias + Isolde (SR/SR/SSR)     win 100%  turns 2.7  hp left 84%
+  Iri + Brannock + Marla + Sera                win 100%  turns 2.2  hp left 88%
+  Iri + Aurelian + Nyx + Brannock (UR)         win 100%  turns 2.0  hp left 95%
+
+BOSS Curator Husk (lvl 5, N gear)
+  Iri + Wick + Pip + Marla (N/N/R)             win  19%  turns 22.6  hp left 37%
+  Iri + Doran + Fenn + Sera (R/R/SR)           win  92%  turns 11.1  hp left 56%
+  Iri + Kael + Tobias + Isolde (SR/SR/SSR)     win  97%  turns 12.0  hp left 60%
+  Iri + Brannock + Marla + Sera                win  99%  turns 13.8  hp left 66%
+  Iri + Aurelian + Nyx + Brannock (UR)         win 100%  turns 8.9  hp left 79%
+
+BOSS Curator Husk (lvl 5, R gear)
+  Iri + Wick + Pip + Marla (N/N/R)             win  97%  turns 13.3  hp left 69%
+  Iri + Doran + Fenn + Sera (R/R/SR)           win 100%  turns 6.7  hp left 76%
+  Iri + Kael + Tobias + Isolde (SR/SR/SSR)     win 100%  turns 8.6  hp left 75%
+  Iri + Brannock + Marla + Sera                win 100%  turns 9.2  hp left 77%
+  Iri + Aurelian + Nyx + Brannock (UR)         win 100%  turns 6.8  hp left 87%
+
+Inkwell: slimes (lvl 7, R gear)
+  Iri + Wick + Pip + Marla (N/N/R)             win 100%  turns 7.5  hp left 58%
+  Iri + Doran + Fenn + Sera (R/R/SR)           win 100%  turns 3.0  hp left 76%
+  Iri + Kael + Tobias + Isolde (SR/SR/SSR)     win 100%  turns 2.9  hp left 81%
+  Iri + Brannock + Marla + Sera                win 100%  turns 3.2  hp left 82%
+  Iri + Aurelian + Nyx + Brannock (UR)         win 100%  turns 3.0  hp left 93%
+
+Inkwell: hound pack (lvl 8, R gear)
+  Iri + Wick + Pip + Marla (N/N/R)             win  92%  turns 5.7  hp left 53%
+  Iri + Doran + Fenn + Sera (R/R/SR)           win 100%  turns 3.2  hp left 67%
+  Iri + Kael + Tobias + Isolde (SR/SR/SSR)     win 100%  turns 3.0  hp left 77%
+  Iri + Brannock + Marla + Sera                win 100%  turns 3.8  hp left 75%
+  Iri + Aurelian + Nyx + Brannock (UR)         win 100%  turns 2.0  hp left 92%
+
+Inkwell F2: knight pair (lvl 9, R gear)
+  Iri + Wick + Pip + Marla (N/N/R)             win  31%  turns 8.8  hp left 41%
+  Iri + Doran + Fenn + Sera (R/R/SR)           win  97%  turns 5.2  hp left 52%
+  Iri + Kael + Tobias + Isolde (SR/SR/SSR)     win 100%  turns 4.1  hp left 66%
+  Iri + Brannock + Marla + Sera                win  98%  turns 6.0  hp left 63%
+  Iri + Aurelian + Nyx + Brannock (UR)         win 100%  turns 3.2  hp left 88%
+
+BOSS Unwritten Warden (lvl 8, R gear, LB0)
+  Iri + Wick + Pip + Marla (N/N/R)             win   6%  turns 11.5  hp left 43%
+  Iri + Doran + Fenn + Sera (R/R/SR)           win  32%  turns 10.7  hp left 34%
+  Iri + Kael + Tobias + Isolde (SR/SR/SSR)     win  79%  turns 9.3  hp left 51%
+  Iri + Brannock + Marla + Sera                win  60%  turns 13.7  hp left 43%
+  Iri + Aurelian + Nyx + Brannock (UR)         win  97%  turns 8.5  hp left 74%
+
+BOSS Unwritten Warden (lvl 9, R gear, LB0)
+  Iri + Wick + Pip + Marla (N/N/R)             win  17%  turns 12.5  hp left 42%
+  Iri + Doran + Fenn + Sera (R/R/SR)           win  60%  turns 10.8  hp left 38%
+  Iri + Kael + Tobias + Isolde (SR/SR/SSR)     win  93%  turns 8.5  hp left 59%
+  Iri + Brannock + Marla + Sera                win  84%  turns 12.2  hp left 53%
+  Iri + Aurelian + Nyx + Brannock (UR)         win 100%  turns 8.0  hp left 76%
+
+BOSS Unwritten Warden (lvl 9, SR gear, LB1)
+  Iri + Wick + Pip + Marla (N/N/R)             win  81%  turns 10.5  hp left 56%
+  Iri + Doran + Fenn + Sera (R/R/SR)           win  98%  turns 7.9  hp left 57%
+  Iri + Kael + Tobias + Isolde (SR/SR/SSR)     win 100%  turns 6.2  hp left 72%
+  Iri + Brannock + Marla + Sera                win  98%  turns 9.2  hp left 65%
+  Iri + Aurelian + Nyx + Brannock (UR)         win 100%  turns 6.5  hp left 84%
+
+BOSS Unwritten Warden (lvl 10, R gear, LB0)
+  Iri + Wick + Pip + Marla (N/N/R)             win  36%  turns 12.8  hp left 45%
+  Iri + Doran + Fenn + Sera (R/R/SR)           win  82%  turns 9.8  hp left 44%
+  Iri + Kael + Tobias + Isolde (SR/SR/SSR)     win  98%  turns 6.9  hp left 67%
+  Iri + Brannock + Marla + Sera                win  94%  turns 10.6  hp left 58%
+  Iri + Aurelian + Nyx + Brannock (UR)         win 100%  turns 7.5  hp left 79%

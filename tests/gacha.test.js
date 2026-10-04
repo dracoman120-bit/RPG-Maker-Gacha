@@ -20,11 +20,11 @@ global.SceneManager = { push: function() {} };
 global.AudioManager = { playSe: function() {} };
 
 function load(file) {
-    var p = path.join(__dirname, '..', 'js', 'plugins', file);
+    var p = file.indexOf('/') >= 0 ? path.join(__dirname, '..', file) : path.join(__dirname, '..', 'js', 'plugins', file);
     vm.runInThisContext(fs.readFileSync(p, 'utf8'), { filename: p });
 }
 load('GachaSystem.js');
-load('GachaBanners.js');
+load('examples/GachaBanners.sample.js');
 
 // ---- tiny test runner -------------------------------------------------------
 var failures = 0;

@@ -574,12 +574,24 @@ Game_System.prototype.gachaData = function() {
     return this._gachaData;
 };
 
+// Other plugins can register functions here to tweak every normalised banner
+// (e.g. facility upgrades that lower pity). Bump Gacha.revision after the
+// inputs of a hook change so the banners are rebuilt.
+Gacha.bannerHooks = [];
+Gacha.revision = 0;
+
 Gacha.banners = function() {
     var raws = Gacha.Banners;
-    if (!Gacha._cache || Gacha._cacheSource !== raws || Gacha._cacheLength !== raws.length) {
-        Gacha._cache = raws.map(Gacha.normalizeBanner);
+    if (!Gacha._cache || Gacha._cacheSource !== raws || Gacha._cacheLength !== raws.length ||
+        Gacha._cacheRevision !== Gacha.revision) {
+        Gacha._cache = raws.map(function(raw) {
+            var b = Gacha.normalizeBanner(raw);
+            Gacha.bannerHooks.forEach(function(hook) { hook(b); });
+            return b;
+        });
         Gacha._cacheSource = raws;
         Gacha._cacheLength = raws.length;
+        Gacha._cacheRevision = Gacha.revision;
     }
     return Gacha._cache;
 };
@@ -699,16 +711,25 @@ Gacha.grant = function(r) {
         if (inParty || seen) {
             r.dupe = true;
             r.isNew = false;
-            r.refund = Gacha.Params.dupeRefund[Gacha.rank(r.rarity)] || 0;
-            if (r.refund > 0) { $gameParty.gainGold(r.refund); }
+            Gacha.onDuplicateActor(r);
         } else if ($dataActors[r.id]) {
             $gameParty.addActor(r.id);
+            Gacha.onNewActor(r);
         }
     } else {
         var db = Gacha.database(r.type);
         if (db && db[r.id]) { $gameParty.gainItem(db[r.id], r.count); }
     }
 };
+
+// Hooks so a game can change what a duplicate actor does (default: gold refund)
+// and react to a brand new actor joining. Set r.note to show text in the results.
+Gacha.onDuplicateActor = function(r) {
+    r.refund = Gacha.Params.dupeRefund[Gacha.rank(r.rarity)] || 0;
+    if (r.refund > 0) { $gameParty.gainGold(r.refund); }
+};
+
+Gacha.onNewActor = function(r) {};
 
 Gacha.logHistory = function(b, results) {
     var data = $gameSystem.gachaData(), max = Gacha.Params.maxHistory;
@@ -1149,7 +1170,9 @@ Gacha.resultLines = function(results) {
             rarity: r.rarity, tag: r.rarity, color: Gacha.color(r.rarity),
             icon: Gacha.entryIcon(r), text: Gacha.entryName(r), right: ''
         };
-        if (r.dupe) {
+        if (r.note) {
+            line.right = r.note;
+        } else if (r.dupe) {
             line.right = 'Dupe' + (r.refund > 0 ? ' +' + r.refund + TextManager.currencyUnit : '');
         } else if (r.isNew) {
             line.right = 'NEW';
